@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Airport_DBDataSet" targetNamespace="http://tempuri.org/Airport_DBDataSet.xsd" xmlns:mstns="http://tempuri.org/Airport_DBDataSet.xsd" xmlns="http://tempuri.org/Airport_DBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Airport_DBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Airport_DBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Forms.Properties.Settings.GlobalReference.Default.Airport_DBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vEmergencyFlightsTableAdapter" GeneratorDataComponentClassName="vEmergencyFlightsTableAdapter" Name="vEmergencyFlights" UserDataComponentName="vEmergencyFlightsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Airport_DBConnectionString (Settings)" DbObjectName="Airport_DB.dbo.vEmergencyFlights" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FLIGHT_NUMBER, FLIGHT_DATE, DAY_OF_WEEK, AIRLINE, TAIL_NUMBER, ORIGIN_AIRPORT, DESTINATION_AIRPORT, SCHEDULED_DEPARTURE, DEPARTURE_TIME, DEPARTURE_DELAY, TAXI_OUT, WHEELS_OFF, SCHEDULED_TIME, ELAPSED_TIME, AIR_TIME, DISTANCE, WHEELS_ON, TAXI_IN, SCHEDULED_ARRIVAL, ARRIVAL_TIME, ARRIVAL_DELAY, DIVERTED, CANCELLED, CANCELLATION_REASON, AIR_SYSTEM_DELAY, SECURITY_DELAY, AIRLINE_DELAY, LATE_AIRCRAFT_DELAY, WEATHER_DELAY FROM dbo.vEmergencyFlights</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FLIGHT_NUMBER" DataSetColumn="FLIGHT_NUMBER" />
+              <Mapping SourceColumn="FLIGHT_DATE" DataSetColumn="FLIGHT_DATE" />
+              <Mapping SourceColumn="DAY_OF_WEEK" DataSetColumn="DAY_OF_WEEK" />
+              <Mapping SourceColumn="AIRLINE" DataSetColumn="AIRLINE" />
+              <Mapping SourceColumn="TAIL_NUMBER" DataSetColumn="TAIL_NUMBER" />
+              <Mapping SourceColumn="ORIGIN_AIRPORT" DataSetColumn="ORIGIN_AIRPORT" />
+              <Mapping SourceColumn="DESTINATION_AIRPORT" DataSetColumn="DESTINATION_AIRPORT" />
+              <Mapping SourceColumn="SCHEDULED_DEPARTURE" DataSetColumn="SCHEDULED_DEPARTURE" />
+              <Mapping SourceColumn="DEPARTURE_TIME" DataSetColumn="DEPARTURE_TIME" />
+              <Mapping SourceColumn="DEPARTURE_DELAY" DataSetColumn="DEPARTURE_DELAY" />
+              <Mapping SourceColumn="TAXI_OUT" DataSetColumn="TAXI_OUT" />
+              <Mapping SourceColumn="WHEELS_OFF" DataSetColumn="WHEELS_OFF" />
+              <Mapping SourceColumn="SCHEDULED_TIME" DataSetColumn="SCHEDULED_TIME" />
+              <Mapping SourceColumn="ELAPSED_TIME" DataSetColumn="ELAPSED_TIME" />
+              <Mapping SourceColumn="AIR_TIME" DataSetColumn="AIR_TIME" />
+              <Mapping SourceColumn="DISTANCE" DataSetColumn="DISTANCE" />
+              <Mapping SourceColumn="WHEELS_ON" DataSetColumn="WHEELS_ON" />
+              <Mapping SourceColumn="TAXI_IN" DataSetColumn="TAXI_IN" />
+              <Mapping SourceColumn="SCHEDULED_ARRIVAL" DataSetColumn="SCHEDULED_ARRIVAL" />
+              <Mapping SourceColumn="ARRIVAL_TIME" DataSetColumn="ARRIVAL_TIME" />
+              <Mapping SourceColumn="ARRIVAL_DELAY" DataSetColumn="ARRIVAL_DELAY" />
+              <Mapping SourceColumn="DIVERTED" DataSetColumn="DIVERTED" />
+              <Mapping SourceColumn="CANCELLED" DataSetColumn="CANCELLED" />
+              <Mapping SourceColumn="CANCELLATION_REASON" DataSetColumn="CANCELLATION_REASON" />
+              <Mapping SourceColumn="AIR_SYSTEM_DELAY" DataSetColumn="AIR_SYSTEM_DELAY" />
+              <Mapping SourceColumn="SECURITY_DELAY" DataSetColumn="SECURITY_DELAY" />
+              <Mapping SourceColumn="AIRLINE_DELAY" DataSetColumn="AIRLINE_DELAY" />
+              <Mapping SourceColumn="LATE_AIRCRAFT_DELAY" DataSetColumn="LATE_AIRCRAFT_DELAY" />
+              <Mapping SourceColumn="WEATHER_DELAY" DataSetColumn="WEATHER_DELAY" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vPersonTableAdapter" GeneratorDataComponentClassName="vPersonTableAdapter" Name="vPerson" UserDataComponentName="vPersonTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Airport_DBConnectionString (Settings)" DbObjectName="Airport_DB.dbo.vPerson" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, first_name, middle_name, last_name, date_of_birth, gender, number, email FROM dbo.vPerson</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="first_name" DataSetColumn="first_name" />
+              <Mapping SourceColumn="middle_name" DataSetColumn="middle_name" />
+              <Mapping SourceColumn="last_name" DataSetColumn="last_name" />
+              <Mapping SourceColumn="date_of_birth" DataSetColumn="date_of_birth" />
+              <Mapping SourceColumn="gender" DataSetColumn="gender" />
+              <Mapping SourceColumn="number" DataSetColumn="number" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vTripTableAdapter" GeneratorDataComponentClassName="vTripTableAdapter" Name="vTrip" UserDataComponentName="vTripTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Airport_DBConnectionString (Settings)" DbObjectName="Airport_DB.dbo.vTrip" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FLIGHT_DATE, origin_name, origin_country, destination_name, destination_country, airline_name FROM dbo.vTrip</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FLIGHT_DATE" DataSetColumn="FLIGHT_DATE" />
+              <Mapping SourceColumn="origin_name" DataSetColumn="origin_name" />
+              <Mapping SourceColumn="origin_country" DataSetColumn="origin_country" />
+              <Mapping SourceColumn="destination_name" DataSetColumn="destination_name" />
+              <Mapping SourceColumn="destination_country" DataSetColumn="destination_country" />
+              <Mapping SourceColumn="airline_name" DataSetColumn="airline_name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Airport_DBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Airport_DBDataSet" msprop:Generator_UserDSName="Airport_DBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vEmergencyFlights" msprop:Generator_TableClassName="vEmergencyFlightsDataTable" msprop:Generator_TableVarName="tablevEmergencyFlights" msprop:Generator_TablePropName="vEmergencyFlights" msprop:Generator_RowDeletingName="vEmergencyFlightsRowDeleting" msprop:Generator_RowChangingName="vEmergencyFlightsRowChanging" msprop:Generator_RowEvHandlerName="vEmergencyFlightsRowChangeEventHandler" msprop:Generator_RowDeletedName="vEmergencyFlightsRowDeleted" msprop:Generator_UserTableName="vEmergencyFlights" msprop:Generator_RowChangedName="vEmergencyFlightsRowChanged" msprop:Generator_RowEvArgName="vEmergencyFlightsRowChangeEvent" msprop:Generator_RowClassName="vEmergencyFlightsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FLIGHT_NUMBER" msprop:Generator_ColumnVarNameInTable="columnFLIGHT_NUMBER" msprop:Generator_ColumnPropNameInRow="FLIGHT_NUMBER" msprop:Generator_ColumnPropNameInTable="FLIGHT_NUMBERColumn" msprop:Generator_UserColumnName="FLIGHT_NUMBER" type="xs:int" minOccurs="0" />
+              <xs:element name="FLIGHT_DATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFLIGHT_DATE" msprop:Generator_ColumnPropNameInRow="FLIGHT_DATE" msprop:Generator_ColumnPropNameInTable="FLIGHT_DATEColumn" msprop:Generator_UserColumnName="FLIGHT_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DAY_OF_WEEK" msprop:Generator_ColumnVarNameInTable="columnDAY_OF_WEEK" msprop:Generator_ColumnPropNameInRow="DAY_OF_WEEK" msprop:Generator_ColumnPropNameInTable="DAY_OF_WEEKColumn" msprop:Generator_UserColumnName="DAY_OF_WEEK" type="xs:short" minOccurs="0" />
+              <xs:element name="AIRLINE" msprop:Generator_ColumnVarNameInTable="columnAIRLINE" msprop:Generator_ColumnPropNameInRow="AIRLINE" msprop:Generator_ColumnPropNameInTable="AIRLINEColumn" msprop:Generator_UserColumnName="AIRLINE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TAIL_NUMBER" msprop:Generator_ColumnVarNameInTable="columnTAIL_NUMBER" msprop:Generator_ColumnPropNameInRow="TAIL_NUMBER" msprop:Generator_ColumnPropNameInTable="TAIL_NUMBERColumn" msprop:Generator_UserColumnName="TAIL_NUMBER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ORIGIN_AIRPORT" msprop:Generator_ColumnVarNameInTable="columnORIGIN_AIRPORT" msprop:Generator_ColumnPropNameInRow="ORIGIN_AIRPORT" msprop:Generator_ColumnPropNameInTable="ORIGIN_AIRPORTColumn" msprop:Generator_UserColumnName="ORIGIN_AIRPORT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESTINATION_AIRPORT" msprop:Generator_ColumnVarNameInTable="columnDESTINATION_AIRPORT" msprop:Generator_ColumnPropNameInRow="DESTINATION_AIRPORT" msprop:Generator_ColumnPropNameInTable="DESTINATION_AIRPORTColumn" msprop:Generator_UserColumnName="DESTINATION_AIRPORT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCHEDULED_DEPARTURE" msprop:Generator_ColumnVarNameInTable="columnSCHEDULED_DEPARTURE" msprop:Generator_ColumnPropNameInRow="SCHEDULED_DEPARTURE" msprop:Generator_ColumnPropNameInTable="SCHEDULED_DEPARTUREColumn" msprop:Generator_UserColumnName="SCHEDULED_DEPARTURE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEPARTURE_TIME" msprop:Generator_ColumnVarNameInTable="columnDEPARTURE_TIME" msprop:Generator_ColumnPropNameInRow="DEPARTURE_TIME" msprop:Generator_ColumnPropNameInTable="DEPARTURE_TIMEColumn" msprop:Generator_UserColumnName="DEPARTURE_TIME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEPARTURE_DELAY" msprop:Generator_ColumnVarNameInTable="columnDEPARTURE_DELAY" msprop:Generator_ColumnPropNameInRow="DEPARTURE_DELAY" msprop:Generator_ColumnPropNameInTable="DEPARTURE_DELAYColumn" msprop:Generator_UserColumnName="DEPARTURE_DELAY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TAXI_OUT" msprop:Generator_ColumnVarNameInTable="columnTAXI_OUT" msprop:Generator_ColumnPropNameInRow="TAXI_OUT" msprop:Generator_ColumnPropNameInTable="TAXI_OUTColumn" msprop:Generator_UserColumnName="TAXI_OUT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WHEELS_OFF" msprop:Generator_ColumnVarNameInTable="columnWHEELS_OFF" msprop:Generator_ColumnPropNameInRow="WHEELS_OFF" msprop:Generator_ColumnPropNameInTable="WHEELS_OFFColumn" msprop:Generator_UserColumnName="WHEELS_OFF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCHEDULED_TIME" msprop:Generator_ColumnVarNameInTable="columnSCHEDULED_TIME" msprop:Generator_ColumnPropNameInRow="SCHEDULED_TIME" msprop:Generator_ColumnPropNameInTable="SCHEDULED_TIMEColumn" msprop:Generator_UserColumnName="SCHEDULED_TIME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ELAPSED_TIME" msprop:Generator_ColumnVarNameInTable="columnELAPSED_TIME" msprop:Generator_ColumnPropNameInRow="ELAPSED_TIME" msprop:Generator_ColumnPropNameInTable="ELAPSED_TIMEColumn" msprop:Generator_UserColumnName="ELAPSED_TIME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AIR_TIME" msprop:Generator_ColumnVarNameInTable="columnAIR_TIME" msprop:Generator_ColumnPropNameInRow="AIR_TIME" msprop:Generator_ColumnPropNameInTable="AIR_TIMEColumn" msprop:Generator_UserColumnName="AIR_TIME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DISTANCE" msprop:Generator_ColumnVarNameInTable="columnDISTANCE" msprop:Generator_ColumnPropNameInRow="DISTANCE" msprop:Generator_ColumnPropNameInTable="DISTANCEColumn" msprop:Generator_UserColumnName="DISTANCE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WHEELS_ON" msprop:Generator_ColumnVarNameInTable="columnWHEELS_ON" msprop:Generator_ColumnPropNameInRow="WHEELS_ON" msprop:Generator_ColumnPropNameInTable="WHEELS_ONColumn" msprop:Generator_UserColumnName="WHEELS_ON" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TAXI_IN" msprop:Generator_ColumnVarNameInTable="columnTAXI_IN" msprop:Generator_ColumnPropNameInRow="TAXI_IN" msprop:Generator_ColumnPropNameInTable="TAXI_INColumn" msprop:Generator_UserColumnName="TAXI_IN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCHEDULED_ARRIVAL" msprop:Generator_ColumnVarNameInTable="columnSCHEDULED_ARRIVAL" msprop:Generator_ColumnPropNameInRow="SCHEDULED_ARRIVAL" msprop:Generator_ColumnPropNameInTable="SCHEDULED_ARRIVALColumn" msprop:Generator_UserColumnName="SCHEDULED_ARRIVAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ARRIVAL_TIME" msprop:Generator_ColumnVarNameInTable="columnARRIVAL_TIME" msprop:Generator_ColumnPropNameInRow="ARRIVAL_TIME" msprop:Generator_ColumnPropNameInTable="ARRIVAL_TIMEColumn" msprop:Generator_UserColumnName="ARRIVAL_TIME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ARRIVAL_DELAY" msprop:Generator_ColumnVarNameInTable="columnARRIVAL_DELAY" msprop:Generator_ColumnPropNameInRow="ARRIVAL_DELAY" msprop:Generator_ColumnPropNameInTable="ARRIVAL_DELAYColumn" msprop:Generator_UserColumnName="ARRIVAL_DELAY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIVERTED" msprop:Generator_ColumnVarNameInTable="columnDIVERTED" msprop:Generator_ColumnPropNameInRow="DIVERTED" msprop:Generator_ColumnPropNameInTable="DIVERTEDColumn" msprop:Generator_UserColumnName="DIVERTED" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CANCELLED" msprop:Generator_ColumnVarNameInTable="columnCANCELLED" msprop:Generator_ColumnPropNameInRow="CANCELLED" msprop:Generator_ColumnPropNameInTable="CANCELLEDColumn" msprop:Generator_UserColumnName="CANCELLED" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CANCELLATION_REASON" msprop:Generator_ColumnVarNameInTable="columnCANCELLATION_REASON" msprop:Generator_ColumnPropNameInRow="CANCELLATION_REASON" msprop:Generator_ColumnPropNameInTable="CANCELLATION_REASONColumn" msprop:Generator_UserColumnName="CANCELLATION_REASON" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AIR_SYSTEM_DELAY" msprop:Generator_ColumnVarNameInTable="columnAIR_SYSTEM_DELAY" msprop:Generator_ColumnPropNameInRow="AIR_SYSTEM_DELAY" msprop:Generator_ColumnPropNameInTable="AIR_SYSTEM_DELAYColumn" msprop:Generator_UserColumnName="AIR_SYSTEM_DELAY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SECURITY_DELAY" msprop:Generator_ColumnVarNameInTable="columnSECURITY_DELAY" msprop:Generator_ColumnPropNameInRow="SECURITY_DELAY" msprop:Generator_ColumnPropNameInTable="SECURITY_DELAYColumn" msprop:Generator_UserColumnName="SECURITY_DELAY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AIRLINE_DELAY" msprop:Generator_ColumnVarNameInTable="columnAIRLINE_DELAY" msprop:Generator_ColumnPropNameInRow="AIRLINE_DELAY" msprop:Generator_ColumnPropNameInTable="AIRLINE_DELAYColumn" msprop:Generator_UserColumnName="AIRLINE_DELAY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LATE_AIRCRAFT_DELAY" msprop:Generator_ColumnVarNameInTable="columnLATE_AIRCRAFT_DELAY" msprop:Generator_ColumnPropNameInRow="LATE_AIRCRAFT_DELAY" msprop:Generator_ColumnPropNameInTable="LATE_AIRCRAFT_DELAYColumn" msprop:Generator_UserColumnName="LATE_AIRCRAFT_DELAY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WEATHER_DELAY" msprop:Generator_ColumnVarNameInTable="columnWEATHER_DELAY" msprop:Generator_ColumnPropNameInRow="WEATHER_DELAY" msprop:Generator_ColumnPropNameInTable="WEATHER_DELAYColumn" msprop:Generator_UserColumnName="WEATHER_DELAY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vPerson" msprop:Generator_TableClassName="vPersonDataTable" msprop:Generator_TableVarName="tablevPerson" msprop:Generator_TablePropName="vPerson" msprop:Generator_RowDeletingName="vPersonRowDeleting" msprop:Generator_RowChangingName="vPersonRowChanging" msprop:Generator_RowEvHandlerName="vPersonRowChangeEventHandler" msprop:Generator_RowDeletedName="vPersonRowDeleted" msprop:Generator_UserTableName="vPerson" msprop:Generator_RowChangedName="vPersonRowChanged" msprop:Generator_RowEvArgName="vPersonRowChangeEvent" msprop:Generator_RowClassName="vPersonRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="first_name" msprop:Generator_ColumnVarNameInTable="columnfirst_name" msprop:Generator_ColumnPropNameInRow="first_name" msprop:Generator_ColumnPropNameInTable="first_nameColumn" msprop:Generator_UserColumnName="first_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="middle_name" msprop:Generator_ColumnVarNameInTable="columnmiddle_name" msprop:Generator_ColumnPropNameInRow="middle_name" msprop:Generator_ColumnPropNameInTable="middle_nameColumn" msprop:Generator_UserColumnName="middle_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="last_name" msprop:Generator_ColumnVarNameInTable="columnlast_name" msprop:Generator_ColumnPropNameInRow="last_name" msprop:Generator_ColumnPropNameInTable="last_nameColumn" msprop:Generator_UserColumnName="last_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_of_birth" msprop:Generator_ColumnVarNameInTable="columndate_of_birth" msprop:Generator_ColumnPropNameInRow="date_of_birth" msprop:Generator_ColumnPropNameInTable="date_of_birthColumn" msprop:Generator_UserColumnName="date_of_birth" type="xs:dateTime" />
+              <xs:element name="gender" msprop:Generator_ColumnVarNameInTable="columngender" msprop:Generator_ColumnPropNameInRow="gender" msprop:Generator_ColumnPropNameInTable="genderColumn" msprop:Generator_UserColumnName="gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="number" msprop:Generator_ColumnVarNameInTable="columnnumber" msprop:Generator_ColumnPropNameInRow="number" msprop:Generator_ColumnPropNameInTable="numberColumn" msprop:Generator_UserColumnName="number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vTrip" msprop:Generator_TableClassName="vTripDataTable" msprop:Generator_TableVarName="tablevTrip" msprop:Generator_TablePropName="vTrip" msprop:Generator_RowDeletingName="vTripRowDeleting" msprop:Generator_RowChangingName="vTripRowChanging" msprop:Generator_RowEvHandlerName="vTripRowChangeEventHandler" msprop:Generator_RowDeletedName="vTripRowDeleted" msprop:Generator_UserTableName="vTrip" msprop:Generator_RowChangedName="vTripRowChanged" msprop:Generator_RowEvArgName="vTripRowChangeEvent" msprop:Generator_RowClassName="vTripRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FLIGHT_DATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFLIGHT_DATE" msprop:Generator_ColumnPropNameInRow="FLIGHT_DATE" msprop:Generator_ColumnPropNameInTable="FLIGHT_DATEColumn" msprop:Generator_UserColumnName="FLIGHT_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="origin_name" msprop:Generator_ColumnVarNameInTable="columnorigin_name" msprop:Generator_ColumnPropNameInRow="origin_name" msprop:Generator_ColumnPropNameInTable="origin_nameColumn" msprop:Generator_UserColumnName="origin_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="origin_country" msprop:Generator_ColumnVarNameInTable="columnorigin_country" msprop:Generator_ColumnPropNameInRow="origin_country" msprop:Generator_ColumnPropNameInTable="origin_countryColumn" msprop:Generator_UserColumnName="origin_country" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="destination_name" msprop:Generator_ColumnVarNameInTable="columndestination_name" msprop:Generator_ColumnPropNameInRow="destination_name" msprop:Generator_ColumnPropNameInTable="destination_nameColumn" msprop:Generator_UserColumnName="destination_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="destination_country" msprop:Generator_ColumnVarNameInTable="columndestination_country" msprop:Generator_ColumnPropNameInRow="destination_country" msprop:Generator_ColumnPropNameInTable="destination_countryColumn" msprop:Generator_UserColumnName="destination_country" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="airline_name" msprop:Generator_ColumnVarNameInTable="columnairline_name" msprop:Generator_ColumnPropNameInRow="airline_name" msprop:Generator_ColumnPropNameInTable="airline_nameColumn" msprop:Generator_UserColumnName="airline_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

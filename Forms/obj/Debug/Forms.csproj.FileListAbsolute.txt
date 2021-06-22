@@ -1,0 +1,10 @@
+D:\_IPPT\Diploma\Forms\bin\Debug\Forms.exe.config
+D:\_IPPT\Diploma\Forms\bin\Debug\Forms.exe
+D:\_IPPT\Diploma\Forms\bin\Debug\Forms.pdb
+D:\_IPPT\Diploma\Forms\obj\Debug\Forms.csproj.AssemblyReference.cache
+D:\_IPPT\Diploma\Forms\obj\Debug\Forms.Form1.resources
+D:\_IPPT\Diploma\Forms\obj\Debug\Forms.Properties.Resources.resources
+D:\_IPPT\Diploma\Forms\obj\Debug\Forms.csproj.GenerateResource.cache
+D:\_IPPT\Diploma\Forms\obj\Debug\Forms.csproj.CoreCompileInputs.cache
+D:\_IPPT\Diploma\Forms\obj\Debug\Forms.exe
+D:\_IPPT\Diploma\Forms\obj\Debug\Forms.pdb
