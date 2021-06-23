@@ -22,7 +22,7 @@ countries = file['iso_country'].tolist()
 
 
 def parse_to_csv(browser, first=False):
-    time.sleep(3)
+    time.sleep(2)
     df = pd.read_html(browser.page_source)[2]
     df = df[['3166-2 code', 'Subdivision name']]
     df.replace(r"[\(\[].*?[\)\]]|[\*]", "", regex=True, inplace=True)
@@ -31,11 +31,10 @@ def parse_to_csv(browser, first=False):
 coefficient = len(countries)//4
 
 def divided_array(browser, start):
-    print(int(coefficient * start), int(coefficient * (start+1)))
     for i in range(int(coefficient * start), int(coefficient * (start+1))):
         browser.get(f"https://www.iso.org/obp/ui#iso:code:3166:{countries[i]}")
         parse_to_csv(browser, True) if i == 0 else parse_to_csv(browser)
-        #print(countries[i])
+        print(countries[i])
 
 
 thread1 = threading.Thread(target=divided_array, args=(webdriver.Chrome(executable_path=chrome_exe + r'\chromedriver.exe', options=options), 0)).start()

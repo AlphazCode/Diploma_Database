@@ -17,9 +17,13 @@ def parse_to_csv(url):
         code += str(i)
     code += "</tbody></table>"
     df = pd.DataFrame(np.concatenate(pd.read_html(code)),columns=['IATA','ICAO','Airline', 'Callsign', 'Country']).drop_duplicates()
+    print(df)
     df.to_csv(dest_codes_path, index=False, header=True, mode='w')
 
 
 
 if __name__ == "__main__":
     parse_to_csv("http://www.flugzeuginfo.net/table_airlinecodes_airline_en.php")
+
+
+input('Press any to exit')

@@ -2,9 +2,7 @@ import numpy as np
 from bs4 import BeautifulSoup
 import pandas as pd
 import os
-import time
 import requests
-import threading
 
 
 path = os.path.dirname(os.getcwd()) + '\\Sources\\'
@@ -22,9 +20,12 @@ def parse_to_csv(url):
     df = pd.DataFrame(np.concatenate(pd.read_html(code)),columns=['IATA','ICAO','Location','Airport', 'Country'])
 
     df = df[['IATA','ICAO']]
+    print(df)
     df.to_csv(dest_codes_path, index=False, header=True, mode='w')
 
 
 
 if __name__ == "__main__":
     parse_to_csv("http://www.flugzeuginfo.net/table_airportcodes_country-location_en.php")
+
+input('Press any to exit')
