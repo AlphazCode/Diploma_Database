@@ -26,6 +26,7 @@ def parse_to_csv(url):
 
 
 if __name__ == "__main__":
-    parse_to_csv("http://www.flugzeuginfo.net/table_airportcodes_country-location_en.php")
-
-input('Press any to exit')
+    if os.path.exists(dest_codes_path):
+        print("File already exists")
+    else:
+        parse_to_csv("http://www.flugzeuginfo.net/table_airportcodes_country-location_en.php")

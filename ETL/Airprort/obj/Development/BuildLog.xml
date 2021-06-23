@@ -1,19 +1,14 @@
 <?xml version="1.0"?>
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
-    <Name>Airprort</Name>
-    <LastWriteTime>2021-06-22T22:24:25.2657687Z</LastWriteTime>
+    <Name>Airport</Name>
+    <LastWriteTime>2021-06-23T08:15:20.1886186Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package.dtsx</Name>
-      <LastWriteTime>2021-06-23T06:21:56.2888089Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>airport.dtsx</Name>
-      <LastWriteTime>2021-06-21T22:41:10.1940527Z</LastWriteTime>
+      <LastWriteTime>2021-06-23T08:46:42.1470657Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

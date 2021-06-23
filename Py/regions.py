@@ -12,7 +12,7 @@ chrome_exe = os.path.dirname(os.path.realpath(__file__))
 path = os.path.dirname(os.getcwd()) + '\\Sources\\'
 source_path = path + 'airports.csv'
 dest_countries_path = path + 'countries_separated.csv'
-dest_regions_path = path + 'regions.csv'
+dest_regions_path = path + '\\transformed\\regions.csv'
 
 file = pd.read_csv(source_path, usecols=['iso_country']).drop_duplicates(subset='iso_country',
                                                                          keep='first').reset_index()
@@ -36,13 +36,19 @@ def divided_array(browser, start):
         parse_to_csv(browser, True) if i == 0 else parse_to_csv(browser)
         print(countries[i])
 
+def main():
+    threading.Thread(target=divided_array, args=(webdriver.Chrome(executable_path=chrome_exe + r'\chromedriver.exe', options=options), 0)).start()
+    threading.Thread(target=divided_array, args=(webdriver.Chrome(executable_path=chrome_exe + r'\chromedriver.exe', options=options), 1)).start()
+    threading.Thread(target=divided_array, args=(webdriver.Chrome(executable_path=chrome_exe + r'\chromedriver.exe', options=options), 2)).start()
+    threading.Thread(target=divided_array, args=(webdriver.Chrome(executable_path=chrome_exe + r'\chromedriver.exe', options=options), 3)).start()
 
-thread1 = threading.Thread(target=divided_array, args=(webdriver.Chrome(executable_path=chrome_exe + r'\chromedriver.exe', options=options), 0)).start()
-thread2 = threading.Thread(target=divided_array, args=(webdriver.Chrome(executable_path=chrome_exe + r'\chromedriver.exe', options=options), 1)).start()
-thread3 = threading.Thread(target=divided_array, args=(webdriver.Chrome(executable_path=chrome_exe + r'\chromedriver.exe', options=options), 2)).start()
-thread4 = threading.Thread(target=divided_array, args=(webdriver.Chrome(executable_path=chrome_exe + r'\chromedriver.exe', options=options), 3)).start()
 
+    for i in threading.enumerate():
+        if not i.is_alive():
+            i.join()
 
-for i in threading.enumerate():
-    if not i.is_alive():
-        i.join()
+if __name__ == "__main__":
+    if os.path.exists(dest_regions_path):
+        print("File already exists")
+    else:
+        main()
